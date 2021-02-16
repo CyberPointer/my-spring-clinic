@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Vets</title>
+</head>
+<body>
+<!--*@thymesVar id="vet" type="com.my.spring.clinic.model.Vet"*/-->
+<h1 th:text="'List of Vets'">List of owners...</h1>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    </thead>
+    <tbody>
+    <tr th:each ="vet : ${vets}">
+        <th th:text="${vet.id}">Id</th>
+        <th th:text="${vet.firstName}">firstName</th>
+        <th th:text="${vet.lastName}">lastName</th>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
