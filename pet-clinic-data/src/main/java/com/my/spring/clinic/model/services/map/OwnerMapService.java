@@ -6,7 +6,6 @@ import com.my.spring.clinic.model.services.OwnerService;
 import com.my.spring.clinic.model.services.PetService;
 import com.my.spring.clinic.model.services.PetTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -14,12 +13,10 @@ import java.util.Set;
 @Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService{
 
-    public PetTypeService petTypeService;
-    public PetService petService;
+    private final PetTypeService petTypeService;
+    private final PetService petService;
 
-   public OwnerMapService(){
 
-   }
     @Autowired
     public OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
