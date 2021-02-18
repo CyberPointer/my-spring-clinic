@@ -1,7 +1,7 @@
 package com.my.spring.clinic.model.repositories;
 
 import com.my.spring.clinic.model.Visit;
-import com.my.spring.clinic.model.services.CrudService;
+import org.springframework.data.repository.CrudRepository;
 
-public interface VisitRepository extends CrudService<Visit, Long> {
+public interface VisitRepository extends CrudRepository<Visit, Long> {
 }

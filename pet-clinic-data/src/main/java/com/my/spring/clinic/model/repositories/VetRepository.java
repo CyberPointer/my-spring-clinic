@@ -1,7 +1,7 @@
 package com.my.spring.clinic.model.repositories;
 
 import com.my.spring.clinic.model.Vet;
-import com.my.spring.clinic.model.services.CrudService;
+import org.springframework.data.repository.CrudRepository;
 
-public interface VetRepository extends CrudService<Vet, Long> {
+public interface VetRepository extends CrudRepository<Vet, Long> {
 }

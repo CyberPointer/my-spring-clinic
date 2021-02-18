@@ -1,7 +1,7 @@
 package com.my.spring.clinic.model.repositories;
 
 import com.my.spring.clinic.model.Speciality;
-import com.my.spring.clinic.model.services.CrudService;
+import org.springframework.data.repository.CrudRepository;
 
-public interface SpecialityRepository extends CrudService<Speciality, Long> {
+public interface SpecialityRepository extends CrudRepository<Speciality, Long> {
 }
