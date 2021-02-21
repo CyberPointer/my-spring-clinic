@@ -52,10 +52,18 @@ public class DataLoader implements CommandLineRunner {
         radiology.setDescription("surgery");
         Speciality savedSurgery = specialtyService.save(surgery);
 
+//        Owner.builder().address("123 Brickerel")
+//                .firstName("Michael")
+//                .lastName("Weston")
+//                .city("miami")
+//                .address("123 bickerel")
+//                .telephone("12143435454");
+
         PetType cat = new PetType();
         cat.setName("cat");
         PetType savedCatPetType = petTypeService.save(cat);
         Owner owner1 = new Owner();
+
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
         owner1.setAddress("123 Brickerel");
